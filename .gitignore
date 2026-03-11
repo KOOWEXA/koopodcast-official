@@ -1,0 +1,34 @@
+# Gitignore para proyectos de KOOWEXA, KOOPODCAST, KOOPAGES y MEROLIKOO
+
+# Dependencias y caché
+node_modules/
+.npm/
+.yarn/
+.pnpm/
+*.log
+.cache/
+.parcel-cache/
+
+# Entornos y configuraciones
+.env*
+!.env.example
+
+# Archivos de sistema e IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*~
+
+# Build y distribución
+dist/
+build/
+*.min.*
+coverage/
+
+# Temporales y backups
+tmp/
+temp/
+*.tmp
+*.bak
