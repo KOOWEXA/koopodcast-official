@@ -3,39 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>KOOPODCAST | El Podcast de KOOWEXA - Videos y Contenido Exclusivo</title>
-    
-    <!-- SEO & Meta Tags -->
-    <meta name="description" content="Bienvenido a KOOPODCAST, la plataforma oficial de KOOWEXA. Disfruta de los mejores videos de YouTube, entrevistas exclusivas y contenido multimedia de alta calidad.">
-    <meta name="keywords" content="KOOPODCAST, KOOWEXA, podcast, youtube, videos, entrevistas, entretenimiento">
+    <meta name="description" content="KOOPODCAST: Explora episodios exclusivos, entrevistas fascinantes y contenido audiovisual de alta calidad. Transmitido en vivo desde YouTube. Únete a nuestra comunidad.">
+    <meta name="keywords" content="KOOPODCAST, podcast, YouTube, videos, entretenimiento, entrevistas, contenido exclusivo, KOOWEXA">
     <meta name="author" content="KOOWEXA">
-    <meta name="robots" content="index, follow">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="theme-color" content="#0F1C3F">
+    <meta name="color-scheme" content="light dark">
     
-    <!-- Open Graph / Facebook -->
+    <title>KOOPODCAST | Episodios Exclusivos y Contenido Premium en YouTube</title>
+    
+    <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://github.com/KOOWEXA/koopodcast-official">
-    <meta property="og:title" content="KOOPODCAST | El Podcast de KOOWEXA">
-    <meta property="og:description" content="Disfruta de los mejores videos y contenido exclusivo de KOOPODCAST.">
+    <meta property="og:title" content="KOOPODCAST | Episodios Exclusivos y Contenido Premium">
+    <meta property="og:description" content="Descubre episodios exclusivos, entrevistas fascinantes y contenido audiovisual de alta calidad en KOOPODCAST.">
     <meta property="og:image" content="assets/img/logo-192.png">
+    <meta property="og:image:width" content="192">
+    <meta property="og:image:height" content="192">
+    <meta property="og:locale" content="es_ES">
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://github.com/KOOWEXA/koopodcast-official">
-    <meta property="twitter:title" content="KOOPODCAST | El Podcast de KOOWEXA">
-    <meta property="twitter:description" content="Disfruta de los mejores videos y contenido exclusivo de KOOPODCAST.">
-    <meta property="twitter:image" content="assets/img/logo-192.png">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="KOOPODCAST | Episodios Exclusivos y Contenido Premium">
+    <meta name="twitter:description" content="Descubre episodios exclusivos, entrevistas fascinantes y contenido audiovisual de alta calidad en KOOPODCAST.">
+    <meta name="twitter:image" content="assets/img/logo-192.png">
 
     <!-- Favicons -->
     <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon.png">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
     <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#0F1C3F">
-
-    <!-- Fonts & Icons -->
+    
+    <!-- Preconnect para mejorar rendimiento -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://www.youtube.com">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVJkEZSMUkrQ6usKu8zIvxUivvrQolCwtrvicHXKQualmpV2mLalQsfuQpbLCaQKO52jGLciu2/Vc==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    
+    <!-- Custom Styles -->
     <link rel="stylesheet" href="assets/css/styles.css">
 
     <!-- Schema.org JSON-LD -->
@@ -45,98 +55,152 @@
       "@type": "PodcastSeries",
       "name": "KOOPODCAST",
       "url": "https://github.com/KOOWEXA/koopodcast-official",
-      "description": "El Podcast oficial de KOOWEXA con los mejores videos de YouTube.",
+      "description": "Episodios exclusivos, entrevistas fascinantes y contenido audiovisual de alta calidad.",
+      "image": "assets/img/logo-192.png",
       "author": {
         "@type": "Organization",
-        "name": "KOOWEXA"
+        "name": "KOOWEXA",
+        "url": "https://koowexa.com"
       },
       "publisher": {
         "@type": "Organization",
         "name": "KOOWEXA"
+      },
+      "potentialAction": {
+        "@type": "WatchAction",
+        "target": "https://www.youtube.com/channel/UCJ87TJ4lmgZik7Y2cVbgMhA"
       }
     }
     </script>
 </head>
 <body>
+    <!-- Header Principal -->
     <header class="header" role="banner">
         <div class="container">
             <nav class="navbar" role="navigation" aria-label="Navegación principal">
-                <a href="#" class="logo" aria-label="Ir al inicio de KOOPODCAST">
-                    <img src="assets/img/logo.png" alt="Logotipo de KOOPODCAST">
+                <a href="#main-content" class="logo" aria-label="KOOPODCAST - Ir al inicio">
+                    <img src="assets/img/logo.png" alt="Logotipo de KOOPODCAST" width="40" height="40">
                     <span>KOOPODCAST</span>
                 </a>
                 
-                <div class="theme-switcher" aria-label="Selector de temas">
-                    <button class="theme-btn active" data-theme-id="standard" aria-pressed="true">Estándar</button>
-                    <button class="theme-btn" data-theme-id="high-contrast" aria-pressed="false">Alto Contraste</button>
+                <div class="theme-switcher" role="group" aria-label="Selector de temas">
+                    <button class="theme-btn active" data-theme-id="standard" aria-pressed="true" aria-label="Tema estándar">
+                        <i class="fas fa-sun"></i> Estándar
+                    </button>
+                    <button class="theme-btn" data-theme-id="high-contrast" aria-pressed="false" aria-label="Tema de alto contraste">
+                        <i class="fas fa-adjust"></i> Contraste
+                    </button>
                 </div>
             </nav>
         </div>
     </header>
 
+    <!-- Contenido Principal -->
     <main id="main-content">
+        <!-- Sección Hero -->
         <section class="hero" aria-labelledby="hero-title">
             <div class="container">
-                <h1 id="hero-title">Bienvenidos a <span class="highlight">KOOPODCAST</span></h1>
-                <p>Descubre nuestro contenido audiovisual exclusivo directamente desde YouTube. La mejor experiencia para nuestros seguidores.</p>
-                <a href="#videos" class="btn-primary" role="button">Ver Videos</a>
+                <h1 id="hero-title">
+                    Bienvenido a <span class="highlight">KOOPODCAST</span>
+                </h1>
+                <p>
+                    Explora episodios exclusivos, entrevistas fascinantes y contenido audiovisual de alta calidad. 
+                    Únete a nuestra comunidad de miles de oyentes que disfrutan del mejor entretenimiento.
+                </p>
+                <a href="#videos" class="btn-primary" role="button">
+                    <i class="fas fa-play"></i> Ver Episodios
+                </a>
             </div>
         </section>
 
+        <!-- Sección de Videos -->
         <section id="videos" class="videos-section" aria-labelledby="videos-title">
             <div class="container">
-                <h2 id="videos-title" class="section-title">Nuestra Galería de Videos</h2>
-                <div class="video-grid" id="video-grid">
-                    <!-- Videos predefinidos con IDs reales obtenidos -->
-                    <article class="video-card" data-video-id="etdrUJ50qOs" role="button" aria-label="Reproducir video: KOOPODCAST Episodio 1">
+                <h2 id="videos-title" class="section-title">
+                    Episodios Destacados
+                </h2>
+                <div class="video-grid" id="video-grid" role="region" aria-label="Galería de videos">
+                    <!-- Video 1 -->
+                    <article class="video-card" data-video-id="etdrUJ50qOs" role="button" tabindex="0" aria-label="Reproducir: KOOPODCAST - Episodio Reciente">
                         <div class="video-thumbnail">
-                            <img src="https://img.youtube.com/vi/etdrUJ50qOs/maxresdefault.jpg" alt="Miniatura de video etdrUJ50qOs" loading="lazy">
-                            <div class="play-overlay">
-                                <div class="play-icon"><i class="fas fa-play"></i></div>
+                            <img 
+                                src="https://img.youtube.com/vi/etdrUJ50qOs/maxresdefault.jpg" 
+                                alt="Miniatura del episodio reciente de KOOPODCAST" 
+                                loading="lazy"
+                                width="320"
+                                height="180">
+                            <div class="play-overlay" aria-hidden="true">
+                                <div class="play-icon">
+                                    <i class="fas fa-play"></i>
+                                </div>
                             </div>
                         </div>
                         <div class="video-info">
-                            <h3>KOOPODCAST - Contenido Reciente</h3>
-                            <p>Mira nuestro último episodio en YouTube.</p>
+                            <h3>Episodio Reciente</h3>
+                            <p>Descubre nuestro último contenido exclusivo con invitados especiales.</p>
                         </div>
                     </article>
 
-                    <article class="video-card" data-video-id="Tvu_rUX1IRY" role="button" aria-label="Reproducir video: KOOPODCAST Episodio 2">
+                    <!-- Video 2 -->
+                    <article class="video-card" data-video-id="Tvu_rUX1IRY" role="button" tabindex="0" aria-label="Reproducir: Entrevistas Exclusivas">
                         <div class="video-thumbnail">
-                            <img src="https://img.youtube.com/vi/Tvu_rUX1IRY/maxresdefault.jpg" alt="Miniatura de video Tvu_rUX1IRY" loading="lazy">
-                            <div class="play-overlay">
-                                <div class="play-icon"><i class="fas fa-play"></i></div>
+                            <img 
+                                src="https://img.youtube.com/vi/Tvu_rUX1IRY/maxresdefault.jpg" 
+                                alt="Miniatura de entrevistas exclusivas" 
+                                loading="lazy"
+                                width="320"
+                                height="180">
+                            <div class="play-overlay" aria-hidden="true">
+                                <div class="play-icon">
+                                    <i class="fas fa-play"></i>
+                                </div>
                             </div>
                         </div>
                         <div class="video-info">
-                            <h3>Entrevistas y Más</h3>
-                            <p>Lo mejor de KOOWEXA en video.</p>
+                            <h3>Entrevistas Exclusivas</h3>
+                            <p>Conversaciones profundas con personalidades destacadas del entretenimiento.</p>
                         </div>
                     </article>
 
-                    <article class="video-card" data-video-id="TjxD6OjLQ78" role="button" aria-label="Reproducir video: KOOPODCAST Episodio 3">
+                    <!-- Video 3 -->
+                    <article class="video-card" data-video-id="TjxD6OjLQ78" role="button" tabindex="0" aria-label="Reproducir: Momentos Destacados">
                         <div class="video-thumbnail">
-                            <img src="https://img.youtube.com/vi/TjxD6OjLQ78/maxresdefault.jpg" alt="Miniatura de video TjxD6OjLQ78" loading="lazy">
-                            <div class="play-overlay">
-                                <div class="play-icon"><i class="fas fa-play"></i></div>
+                            <img 
+                                src="https://img.youtube.com/vi/TjxD6OjLQ78/maxresdefault.jpg" 
+                                alt="Miniatura de momentos destacados" 
+                                loading="lazy"
+                                width="320"
+                                height="180">
+                            <div class="play-overlay" aria-hidden="true">
+                                <div class="play-icon">
+                                    <i class="fas fa-play"></i>
+                                </div>
                             </div>
                         </div>
                         <div class="video-info">
-                            <h3>KOOWEXA Live</h3>
-                            <p>Momentos destacados de nuestras transmisiones.</p>
+                            <h3>Momentos Destacados</h3>
+                            <p>Los mejores fragmentos de nuestras transmisiones en vivo.</p>
                         </div>
                     </article>
 
-                    <article class="video-card" data-video-id="NN2BSydj2_Q" role="button" aria-label="Reproducir video: KOOPODCAST Episodio 4">
+                    <!-- Video 4 -->
+                    <article class="video-card" data-video-id="NN2BSydj2_Q" role="button" tabindex="0" aria-label="Reproducir: Contenido Premium">
                         <div class="video-thumbnail">
-                            <img src="https://img.youtube.com/vi/NN2BSydj2_Q/maxresdefault.jpg" alt="Miniatura de video NN2BSydj2_Q" loading="lazy">
-                            <div class="play-overlay">
-                                <div class="play-icon"><i class="fas fa-play"></i></div>
+                            <img 
+                                src="https://img.youtube.com/vi/NN2BSydj2_Q/maxresdefault.jpg" 
+                                alt="Miniatura de contenido premium" 
+                                loading="lazy"
+                                width="320"
+                                height="180">
+                            <div class="play-overlay" aria-hidden="true">
+                                <div class="play-icon">
+                                    <i class="fas fa-play"></i>
+                                </div>
                             </div>
                         </div>
                         <div class="video-info">
-                            <h3>Podcast en Video</h3>
-                            <p>Disfruta de la mejor calidad visual.</p>
+                            <h3>Contenido Premium</h3>
+                            <p>Acceso exclusivo a detrás de cámaras y contenido especial.</p>
                         </div>
                     </article>
                 </div>
@@ -145,24 +209,34 @@
     </main>
 
     <!-- Modal de Video -->
-    <div class="modal-overlay" id="video-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-overlay" id="video-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
         <div class="modal-content">
-            <button class="close-modal" id="close-modal" aria-label="Cerrar reproductor">&times;</button>
-            <div id="player-container"></div>
+            <button class="close-modal" id="close-modal" aria-label="Cerrar reproductor de video">
+                <i class="fas fa-times"></i>
+            </button>
+            <div id="player-container" role="region" aria-label="Reproductor de video"></div>
         </div>
     </div>
 
+    <!-- Footer -->
     <footer role="contentinfo">
         <div class="container">
-            <div class="social-links">
-                <a href="https://www.youtube.com/channel/UCJ87TJ4lmgZik7Y2cVbgMhA" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                <a href="https://twitter.com/koowexa" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                <a href="https://instagram.com/koowexa" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <div class="social-links" aria-label="Enlaces a redes sociales">
+                <a href="https://www.youtube.com/channel/UCJ87TJ4lmgZik7Y2cVbgMhA" target="_blank" rel="noopener noreferrer" aria-label="Visita nuestro canal de YouTube">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://twitter.com/koowexa" target="_blank" rel="noopener noreferrer" aria-label="Síguenos en Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://instagram.com/koowexa" target="_blank" rel="noopener noreferrer" aria-label="Síguenos en Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
             </div>
-            <p>&copy; 2024 KOOWEXA. Todos los derechos reservados. KOOPODCAST es una marca registrada.</p>
+            <p>&copy; <span id="year"></span> KOOPODCAST. Todos los derechos reservados. Producido por KOOWEXA.</p>
         </div>
     </footer>
 
-    <script src="assets/js/scripts.js"></script>
+    <!-- Scripts -->
+    <script src="assets/js/scripts.js" defer></script>
 </body>
 </html>
