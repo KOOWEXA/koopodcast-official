@@ -1,0 +1,21 @@
+{
+  "name": "KOOPODCAST Official",
+  "short_name": "KOOPODCAST",
+  "description": "El Podcast oficial de KOOWEXA con los mejores videos de YouTube.",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#0F1C3F",
+  "theme_color": "#0F1C3F",
+  "icons": [
+    {
+      "src": "assets/img/logo-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/img/logo.png",
+      "sizes": "1024x1024",
+      "type": "image/png"
+    }
+  ]
+}
