@@ -1,13 +1,63 @@
-/* KOOPODCAST - Scripts Oficiales */
+/* KOOPODCAST - Scripts Oficiales (Videos Edition) */
 
 document.addEventListener('DOMContentLoaded', () => {
     const menuToggle = document.getElementById('menuToggle');
     const navLinks = document.querySelector('.nav-links');
     const currentYear = document.getElementById('currentYear');
-    const profileCards = document.querySelectorAll('.profile-card');
+    const videosGrid = document.getElementById('videosGrid');
+    const videoModal = document.getElementById('videoModal');
+    const youtubePlayer = document.getElementById('youtubePlayer');
+    const closeButton = document.querySelector('.close-button');
+
+    // Video Data (IDs from KOOPODCAST Channel)
+    const videoIds = [
+        { id: 'etdrUJ50qOs', title: 'KOOPODCAST Episode 4 with EDW Offensive Linemen' },
+        { id: 'Tvu_rUX1IRY', title: 'KOOPODCAST Ep3 with Hacksaw Diedrich' },
+        { id: 'TjxD6OjLQ78', title: 'KOOPODCAST Episode 2 with Jake Passman' },
+        { id: 'NN2BSydj2_Q', title: 'KOOPODCAST 1st Podcast, No Guest' }
+    ];
 
     // Set current year
     if (currentYear) currentYear.textContent = new Date().getFullYear();
+
+    // Render Videos
+    const renderVideos = () => {
+        if (!videosGrid) return;
+        videosGrid.innerHTML = videoIds.map(video => `
+            <div class="video-card" onclick="openVideo('${video.id}')">
+                <div class="video-thumbnail" style="background-image: url('https://img.youtube.com/vi/${video.id}/mqdefault.jpg')">
+                    <div class="play-overlay">
+                        <i class="fas fa-play play-icon"></i>
+                    </div>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">${video.title}</h3>
+                </div>
+            </div>
+        `).join('');
+    };
+
+    // Video Modal Functions
+    window.openVideo = (videoId) => {
+        if (!videoModal || !youtubePlayer) return;
+        youtubePlayer.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+        videoModal.style.display = 'block';
+        document.body.style.overflow = 'hidden'; // Prevent scrolling
+    };
+
+    const closeVideo = () => {
+        if (!videoModal || !youtubePlayer) return;
+        youtubePlayer.src = ''; // Stop video
+        videoModal.style.display = 'none';
+        document.body.style.overflow = 'auto'; // Restore scrolling
+    };
+
+    // Event Listeners
+    if (closeButton) closeButton.addEventListener('click', closeVideo);
+    
+    window.addEventListener('click', (event) => {
+        if (event.target === videoModal) closeVideo();
+    });
 
     // Menu Toggle Logic
     const toggleMenu = () => {
@@ -50,20 +100,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
-    // Intersection Observer for Animations
-    const initIntersectionObserver = () => {
-        if (!('IntersectionObserver' in window)) return;
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.animationPlayState = 'running';
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-        profileCards.forEach(card => observer.observe(card));
-    };
-
     // Scroll Header Effect
     const initScrollHeader = () => {
         let lastScroll = 0;
@@ -85,58 +121,15 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
-    // Security Features
-    const initSecurity = () => {
-        // Prevent right click
-        document.addEventListener('contextmenu', e => {
-            e.preventDefault();
-            return false;
-        });
-
-        // Prevent some keyboard shortcuts
-        document.addEventListener('keydown', e => {
-            // F12 or Ctrl+Shift+I
-            if ((e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'i')) || (e.key === 'F12')) {
-                e.preventDefault();
-                return false;
-            }
-            // Ctrl+U (View Source) or Ctrl+Shift+J (Console)
-            if ((e.ctrlKey && (e.key === 'U' || e.key === 'u')) || (e.ctrlKey && e.shiftKey && (e.key === 'J' || e.key === 'j'))) {
-                e.preventDefault();
-                return false;
-            }
-        });
-
-        // Prevent image dragging
-        document.addEventListener('dragstart', e => {
-            if (e.target.tagName === 'IMG') {
-                e.preventDefault();
-                return false;
-            }
-        });
-    };
-
-    // Theme Detection
-    const initThemeDetection = () => {
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
-        const setTheme = (isDark) => {
-            document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
-        };
-        setTheme(prefersDark.matches);
-        prefersDark.addEventListener('change', e => setTheme(e.matches));
-    };
-
     // Initialization calls
     if (menuToggle) menuToggle.addEventListener('click', toggleMenu);
     document.querySelectorAll('.nav-links a').forEach(link => {
         link.addEventListener('click', closeMenu);
     });
 
+    renderVideos();
     initSmoothScroll();
-    initIntersectionObserver();
     initScrollHeader();
-    initSecurity();
-    initThemeDetection();
 
-    console.log('KOOPODCAST plataforma cargada y optimizada');
+    console.log('KOOPODCAST Videos plataforma cargada');
 });
